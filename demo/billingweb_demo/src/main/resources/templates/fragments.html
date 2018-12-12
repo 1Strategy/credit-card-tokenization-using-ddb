@@ -1,0 +1,31 @@
+<!DOCTYPE HTML>
+
+<html xmlns:th="http://www.thymeleaf.org">
+    <body>
+        <div th:fragment="header" class="container">
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="#"><img width=50 src="http://www.1strategy.com/wp-content/uploads/2016/12/logo-1.png" class="img-fluid" alt="Demo"></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Overview <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/myorders">My Orders</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/neworder">New Order</a>
+                </li>
+                </ul>
+            </div>
+            </nav>
+        </div>
+
+        <div th:fragment="footer" class="container">
+            1Strategy 2018 All Rights Reserved
+        </div>
+    </body>
+</html>

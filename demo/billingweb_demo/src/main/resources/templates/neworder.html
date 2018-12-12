@@ -1,0 +1,39 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head> 
+    <title>Getting Started: Serving Web Content</title> 
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <base href="/"/>
+    <link rel="stylesheet" type="text/css" href="/webjars/bootstrap/css/bootstrap.min.css"/>
+    <script type="text/javascript" src="/webjars/jquery/jquery.min.js"></script>
+    <script type="text/javascript" src="/webjars/bootstrap/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <div th:replace="~{fragments :: header}"></div>
+    <div class="container">
+        <form action="#" th:action="@{/neworder}" th:object="${order}" method="post">
+            <div class="form-group row">
+                <label for="name-input" class="col-2 col-form-label">Name</label>
+                <div class="col-10">
+                    <input th:field="*{name}" class="form-control" type="text" id="name-input">
+                </div>
+            </div>
+            <div class="form-group row">
+                <label for="name-detail" class="col-2 col-form-label">Detail</label>
+                <div class="col-10">
+                    <input th:field="*{detail}" class="form-control" type="text" id="name-detail">
+                </div>
+            </div>
+            <div class="form-group row">
+                <label for="name-payment" class="col-2 col-form-label">Payment Method</label>
+                <div class="col-10">
+                    <input th:field="*{paymentMethod}" class="form-control" type="text" id="name-payment">
+                </div>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button> 
+            <button type="reset" class="btn btn-primary">Reset</button> 
+        </form>
+    </div>
+    <div th:replace="~{fragments :: footer}"></div>
+</body>
+</html>
