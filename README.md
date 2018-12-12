@@ -37,7 +37,7 @@ Here is a typical three-tier billing system design to demonstrate how the tokeni
 
 If you want to deploy and run the solution locally, be sure you have the following prerequisites.
 
-1. [AWS credentials is proper configured locally](https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-configure.html)
+1. [AWS credentials is configured locally](https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-configure.html)
 
 1. Java 8 or later is installed
 
