@@ -1,11 +1,11 @@
 # How to protect Primary Account Number (PAN) data in AWS
 
 ## Overview
-Customers frequently ask about how to securely store the credit card data in AWS which meets PCI compliance. They want end to end encryption of PAN data and security management of the encryption keys. This post provides a solution to secure PAN data using [Amazon DynamoDB Encryption Client](https://docs.aws.amazon.com/dynamodb-encryption-client/latest/devguide/what-is-ddb-encrypt.html) and [AWS Key Management Service (AWS KMS)](https://docs.aws.amazon.com/kms/latest/developerguide/overview.html). DynamoDB client-side encryption helps you to protect your data before you send it to DynamoDB, so your PAN data is encrypted in transit and at rest, and KMS makes it easy for you to create and manage encryption keys, and also tracks the usage of the encryption keys in AWS CloudTrail to meet your regulatory and compliance needs.
+Customers frequently ask about how to securely store the credit card data in AWS which meets PCI compliance. They want end-to-end encryption of Primary Account Number (PAN) data and security management of the encryption keys. This post provides a solution to secure PAN data using [Amazon DynamoDB Encryption Client](https://docs.aws.amazon.com/dynamodb-encryption-client/latest/devguide/what-is-ddb-encrypt.html) and [Amazon Key Management Service (AWS KMS)](https://docs.aws.amazon.com/kms/latest/developerguide/overview.html). DynamoDB client-side encryption helps you to protect your data before you send it to DynamoDB, so your PAN data is encrypted in transit and at rest, and KMS makes it easy for you to create and manage encryption keys, and also tracks the usage of the encryption keys in AWS CloudTrail to meet your regulatory and compliance needs.
 
 ## System Design
 
-Here is a typical three-tier billing system design to demonstrate how the tokenization solution works in an end to end scenario.
+Here is a typical three-tier billing system design to demonstrate how the tokenization solution works in an end-to-end scenario.
 
 <img src="./images/myorderdemo.png" width="800">
 
@@ -36,6 +36,8 @@ Here is a typical three-tier billing system design to demonstrate how the tokeni
 ### Prerequisites
 
 If you want to deploy and run the solution locally, be sure you have the following prerequisites.
+
+1. [AWS credentials is proper configured locally] (https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-configure.html)
 
 1. Java 8 or later is installed
 
